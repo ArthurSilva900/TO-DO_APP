@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To-Do — Aula de Web</title>
+    <!-- Importa o CSS (requisito) -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>To‑Do — Aula de Web (HTML/CSS/JS)</h1>
+
+      <!-- Formulário simples para adicionar tarefa -->
+      <form id="task-form" class="task-form">
+        <input id="task-input" type="text" placeholder="Descreva a tarefa..." required />
+
+        <label for="priority-select" class="sr-only">Prioridade</label>
+        <select id="priority-select">
+          <option value="high">Alta</option>
+          <option value="medium" selected>Média</option>
+          <option value="low">Baixa</option>
+        </select>
+
+        <button id="add-task-button" type="submit" class="btn">Adicionar</button>
+      </form>
+
+      <!-- Lista onde as tarefas serão inseridas dinamicamente -->
+      <ul id="task-list" class="task-list" aria-live="polite"></ul>
+
+      <p class="note">Marque com o checkbox para completar. As tarefas ficam salvas no navegador.</p>
+    </main>
+
+    <!-- Importa o JS (requisito). Uso de `defer` para carregar depois do HTML -->
+    <script src="js/script.js" defer></script>
+  </body>
+</html>
